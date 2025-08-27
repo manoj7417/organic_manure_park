@@ -81,7 +81,20 @@ export default function NavigationBar() {
           </div>
 
           {/* Hamburger Menu Button - Now visible on all screen sizes */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-3">
+            {/* Cow Icon - Redirects to Kamdhenu */}
+            <Link href="/kamdhenu" className="hidden lg:block">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-green-50 transition-all duration-200 cursor-pointer">
+                <Image
+                  src="/cow.png"
+                  alt="Cow Icon - Go to Kamdhenu"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
+                />
+              </div>
+            </Link>
+
             <span
               className={`text-base hidden lg:block transition-colors duration-300 uppercase ${
                 isScrolled ? " text-green-700" : "text-black drop-shadow-lg"
@@ -89,6 +102,7 @@ export default function NavigationBar() {
             >
               Menu
             </span>
+
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button

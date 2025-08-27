@@ -1,4 +1,4 @@
-import { Leaf, Phone, Mail, MapPin } from 'lucide-react';
+import { Leaf, Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -12,8 +12,13 @@ export default function Footer() {
               <span className="text-xl font-bold">Organic Manure Park</span>
             </div>
             <p className="text-green-100 leading-relaxed">
-              Leading the way in sustainable agriculture with innovative organic solutions 
-              that benefit both farmers and the environment.
+              Leading the way in sustainable agriculture with innovative organic
+              solutions that benefit both farmers and the environment.
+            </p>
+            <p className="text-green-100">
+              <span className="font-medium">Promoted by:</span>
+              <br />
+              MaAMMA Agribusiness Pvt Ltd
             </p>
           </div>
 
@@ -22,22 +27,34 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-green-100 hover:text-white transition-colors duration-200">
+                <a
+                  href="#about"
+                  className="text-green-100 hover:text-white transition-colors duration-200"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#park" className="text-green-100 hover:text-white transition-colors duration-200">
+                <a
+                  href="#park"
+                  className="text-green-100 hover:text-white transition-colors duration-200"
+                >
                   Organic Manure Park
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-green-100 hover:text-white transition-colors duration-200">
+                <a
+                  href="#projects"
+                  className="text-green-100 hover:text-white transition-colors duration-200"
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-green-100 hover:text-white transition-colors duration-200">
+                <a
+                  href="#contact"
+                  className="text-green-100 hover:text-white transition-colors duration-200"
+                >
                   Contact Us
                 </a>
               </li>
@@ -58,7 +75,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-green-300" />
-                <span className="text-green-100">Organic Manure Park, India</span>
+                <span className="text-green-100">
+                  Organic Manure Park, India
+                </span>
               </div>
             </div>
           </div>
@@ -67,12 +86,9 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Company</h3>
             <div className="space-y-2">
-              <p className="text-green-100">
-                <span className="font-medium">Promoted by:</span><br />
-                MaAMMA Agribusiness Pvt Ltd
-              </p>
               <p className="text-green-100 text-sm">
-                A leading name in sustainable agriculture and organic farming solutions.
+                A leading name in sustainable agriculture and organic farming
+                solutions.
               </p>
             </div>
           </div>
@@ -85,10 +101,16 @@ export default function Footer() {
               © 2025 Organic Manure Park. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-green-100 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-green-100 hover:text-white transition-colors duration-200"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-green-100 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-green-100 hover:text-white transition-colors duration-200"
+              >
                 Terms of Service
               </a>
             </div>

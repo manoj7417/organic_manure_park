@@ -42,7 +42,7 @@ export default function Home() {
   const [successMessage, setSuccessMessage] = useState(""); // To show success or error messages
   const [isLoading, setIsLoading] = useState(false);
   const [countdownInterval, setCountdownInterval] = useState(null);
-  
+
   // Cleanup countdown interval on component unmount
   useEffect(() => {
     return () => {
@@ -51,7 +51,7 @@ export default function Home() {
       }
     };
   }, [countdownInterval]);
-  
+
   const imagesAndNames = [
     { src: "/amritmahal.png", name: "अमृतमहल / Amritmahal" },
     { src: "/Ponwar.png", name: "पोनवार / Ponwar" },
@@ -628,7 +628,7 @@ export default function Home() {
             The news is for information purpose only. We do not promote or
             endorse any pertinent issue.
             <br />
-            <span className="font-bold">copyright © 2024 The Agro Village (TAV)</span>
+            <span className="font-bold">copyright © 2025 Organic Manure Park</span>
             <div className="flex gap-16 items-center  mt-8">
               {/* Image with popup */}
               <div className="relative group bg-[#ffffff99]">
@@ -673,17 +673,17 @@ export default function Home() {
             </p>
 
             <p className="mt-1 text-lg md:text-xl ">ma.agripl@gmail.com</p>
-            <p className="mt-1 text-lg md:text-xl ">
+            {/* <p className="mt-1 text-lg md:text-xl ">
               enquiry@theagrovillage.com
-            </p>
+            </p> */}
           </div>
-          <a href="https://www.facebook.com/people/Agro-Village/61566053081891/">
+          <a href="https://www.facebook.com">
             <FaFacebook className="h-7 w-7 text-blue-700" />
           </a>
-          <a href="https://www.instagram.com/agro__village/">
+          <a href="https://www.instagram.com">
             <FaInstagram className="h-7 w-7 text-red-700" />
           </a>
-          <a href="https://x.com/agro_village_">
+          <a href="https://x.com">
             <FaXTwitter className="h-7 w-7 text-blue-900" />
           </a>
         </div>
