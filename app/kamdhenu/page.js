@@ -41,6 +41,17 @@ export default function Home() {
   const [resendCountdown, setResendCountdown] = useState(0);
   const [successMessage, setSuccessMessage] = useState(""); // To show success or error messages
   const [isLoading, setIsLoading] = useState(false);
+  const [countdownInterval, setCountdownInterval] = useState(null);
+  
+  // Cleanup countdown interval on component unmount
+  useEffect(() => {
+    return () => {
+      if (countdownInterval) {
+        clearInterval(countdownInterval);
+      }
+    };
+  }, [countdownInterval]);
+  
   const imagesAndNames = [
     { src: "/amritmahal.png", name: "अमृतमहल / Amritmahal" },
     { src: "/Ponwar.png", name: "पोनवार / Ponwar" },
@@ -112,15 +123,18 @@ export default function Home() {
         setOtpSent(true);
         setResendCountdown(10); // Set countdown for resend OTP
 
-        let countdownInterval = setInterval(() => {
+        const interval = setInterval(() => {
           setResendCountdown((prev) => {
-            if (prev === 1) {
-              clearInterval(countdownInterval); // Clear interval when countdown ends
+            if (prev <= 1) {
+              clearInterval(interval); // Clear interval when countdown ends
               setIsButtonDisabled(false); // Re-enable button after the countdown
+              setCountdownInterval(null);
+              return 0;
             }
             return prev - 1;
           });
         }, 1000);
+        setCountdownInterval(interval);
 
         return data;
       } else {

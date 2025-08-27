@@ -121,6 +121,14 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 /* Floating animations */
@@ -236,5 +244,61 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
   }
+  
+  /* Remove any potential top border or margin */
+  html, body {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+/* Custom Swiper Styles */
+.my-swiper {
+  padding: 20px 0 60px 0;
+}
+
+.my-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-swiper .swiper-button-next,
+.my-swiper .swiper-button-prev {
+  color: #16a34a;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.my-swiper .swiper-button-next:hover,
+.my-swiper .swiper-button-prev:hover {
+  background: #16a34a;
+  color: white;
+  transform: scale(1.1);
+}
+
+.my-swiper .swiper-button-next::after,
+.my-swiper .swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.my-swiper .swiper-pagination-bullet {
+  background: #16a34a;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.my-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #16a34a;
+  transform: scale(1.2);
 }
