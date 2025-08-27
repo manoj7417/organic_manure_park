@@ -63,7 +63,7 @@ export default function NavigationBar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md border-b border-green-100 shadow-lg"
-          : "bg-black/20 backdrop-blur-sm"
+          : "bg-white backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,7 +84,7 @@ export default function NavigationBar() {
           <div className="flex items-center space-x-2">
             <span
               className={`text-base hidden lg:block transition-colors duration-300 uppercase ${
-                isScrolled ? "text-gray-800" : "text-white drop-shadow-lg"
+                isScrolled ? " text-green-700" : "text-black drop-shadow-lg"
               }`}
             >
               Menu
@@ -97,7 +97,7 @@ export default function NavigationBar() {
                   className={`transition-all duration-200 cursor-pointer ${
                     isScrolled
                       ? "text-green-700 hover:text-green-900 hover:bg-green-50"
-                      : "text-white hover:text-green-200 hover:bg-white/20"
+                      : "text-black"
                   }`}
                   aria-label="Open navigation menu"
                 >
