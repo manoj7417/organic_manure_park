@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { FaHome } from 'react-icons/fa';
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Accordiann from "./Accordiann.jsx"
 import {
   Building2,
@@ -39,9 +40,9 @@ export default function Home() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [resendCountdown, setResendCountdown] = useState(0);
   const [successMessage, setSuccessMessage] = useState(""); // To show success or error messages
-  const [isLoading, setIsLoading] = useState(false); 
-  const imagesAndNames  = [
-  { src: "/amritmahal.png", name: "अमृतमहल / Amritmahal" },
+  const [isLoading, setIsLoading] = useState(false);
+  const imagesAndNames = [
+    { src: "/amritmahal.png", name: "अमृतमहल / Amritmahal" },
     { src: "/Ponwar.png", name: "पोनवार / Ponwar" },
     { src: "/nagori.png", name: "नागौरी / Nagori" },
     { src: "/nimari.png", name: "निमाड़ी / Nimari" },
@@ -55,7 +56,7 @@ export default function Home() {
     { src: "/ongoel.png", name: "ओंगोल / Ongole" },
     { src: "/kangayam.png", name: "कंगायम / Kangayam" },
     { src: "/umblacheri.png", name: "अम्बलाचेरी / Umblacheri" },
-    { src: "/baragur.png", name: "बरगुर / Baragur" },   
+    { src: "/baragur.png", name: "बरगुर / Baragur" },
     { src: "/Kasaragod.png", name: "कासरगोड / Kasaragod" },
     { src: "/hariana.png", name: "हरियाना / Hariana" },
     { src: "/tharparkar.png", name: "थारपारकर / Tharparkar" },
@@ -80,7 +81,7 @@ export default function Home() {
       setSuccessMessage(""); // Clear success message when modal is closed
     }
   };
-const fadeInUp = {
+  const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
@@ -142,8 +143,8 @@ const fadeInUp = {
     }
   };
 
-    const sendAppointmentConfirmation = async () => {
-      setIsLoading(true);
+  const sendAppointmentConfirmation = async () => {
+    setIsLoading(true);
     if (!email || !name || !mobileNumber || !appointmentTime) {
       alert("Please provide all the required information.");
       return;
@@ -201,10 +202,10 @@ const fadeInUp = {
       if (!responseAdmin.ok) {
         throw new Error("Error sending email to admin.");
       }
- setIsLoading(false);
+      setIsLoading(false);
       setSuccessMessage("Appointment Confirmed. Confirmation emails sent!"); // Show success message
     } catch (error) {
-         setIsLoading(false);
+      setIsLoading(false);
       console.error("Error occurred while sending confirmation emails:", error);
       setSuccessMessage("Failed to send confirmation emails."); // Show error message
     } finally {
@@ -214,76 +215,76 @@ const fadeInUp = {
 
   return (
     <>
-    <div
-      className="relative flex flex-col md:flex-row justify-center items-center min-h-screen  bg-center w-full"
-      
-    >
-          <div className="w-full md:w-1/2 hidden md:block max-h-screen"><img className="h-screen" src="/cows10.jpg"/></div>
-           <div className="relative z-20 w-full md:w-1/2  px-8 bg-white  text-center">
-        <img src="/cow.png" alt="Cow" className=" h-36 mx-auto mb-2" />
+      <div
+        className="relative flex flex-col md:flex-row justify-center items-center min-h-screen  bg-center w-full"
+
+      >
+        <div className="w-full md:w-1/2 hidden md:block max-h-screen"><img className="h-screen" src="/cows10.jpg" alt="Cows background" /></div>
+        <div className="relative z-20 w-full md:w-1/2  px-8 bg-white  text-center">
+          <img src="/cow.png" alt="Cow" className=" h-36 mx-auto mb-2" />
           <h1 className="text-2xl font-bold text-[#43923f] mb-4">PROJECT </h1>
-          
-                <h1 className="text-4xl font-bold text-[#c74331] mb-4">KAMDHENU</h1>
-        <h1 className="text-2xl font-bold text-[#43923f] mb-4">BY </h1>
 
-        <a href="/"><img src="/logo.png" alt="Logo" className="h-16 mx-auto" /></a>
-        <p className="text-lg mt-4">
-          The Hindu scriptures educate us that the cow is considered a divine form of Goddess that fulfils wishes.<br></br>
-Kamadhenu is also seen as a sacred and benevolent being that symbolizes prosperity, abundance, and the gifts of nature.
+          <h1 className="text-4xl font-bold text-[#c74331] mb-4">KAMDHENU</h1>
+          <h1 className="text-2xl font-bold text-[#43923f] mb-4">BY </h1>
 
-        </p>
-        <h1 className="text-2xl text-black font-bold  rounded-lg p-4 typewriter-animation">
-         Why <br></br><div className="full flex justify-center"><img className="h-24 w-24" src="/you.png"/></div>Should be part of this Project
+          <Link href="/"><img src="/logo.png" alt="Logo" className="h-16 mx-auto" /></Link>
+          <p className="text-lg mt-4">
+            The Hindu scriptures educate us that the cow is considered a divine form of Goddess that fulfils wishes.<br></br>
+            Kamadhenu is also seen as a sacred and benevolent being that symbolizes prosperity, abundance, and the gifts of nature.
+
+          </p>
+          <h1 className="text-2xl text-black font-bold  rounded-lg p-4 typewriter-animation">
+            Why <br></br><div className="full flex justify-center"><img className="h-24 w-24" src="/you.png" alt="You icon" /></div>Should be part of this Project
 
           </h1>
-<motion.a href="#about2" className="mb-2">
-              <motion.p
-                variants={fadeInUp}
-                className=" md:inline-block text-md text-white bg-green-500  hover:text-white rounded-lg px-4 py-2 hover:cursor-pointer hover:font-medium"
-              >
-                Know More
-              </motion.p>
-            </motion.a>
-        
-        
-         <a
-        href="/"
-        className="fixed top-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-[#43923f] hover:text-white transition"
-      >
-        <FaHome className="text-2xl text-[#43923f] hover:text-white" /> {/* React Icon */}
-      </a>
+          <motion.a href="#about2" className="mb-2">
+            <motion.p
+              variants={fadeInUp}
+              className=" md:inline-block text-md text-white bg-green-500  hover:text-white rounded-lg px-4 py-2 hover:cursor-pointer hover:font-medium"
+            >
+              Know More
+            </motion.p>
+          </motion.a>
+
+
+          <Link
+            href="/"
+            className="fixed top-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-[#43923f] hover:text-white transition"
+          >
+            <FaHome className="text-2xl text-[#43923f] hover:text-white" /> {/* React Icon */}
+          </Link>
+        </div>
+
       </div>
-     
-      </div>
-      <section id="about2"  className="py-32 bg-gray-50 px-4 md:px-20">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="w-12 h-1 bg-green-600 mb-8" />
-                <h2 className="text-5xl font-light mb-8">
-                ABOUT COWS in INDIA 
-                </h2>
-                <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                  There are approximately 37 Types of Cow breeds in India. 
+      <section id="about2" className="py-32 bg-gray-50 px-4 md:px-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="w-12 h-1 bg-green-600 mb-8" />
+              <h2 className="text-5xl font-light mb-8">
+                ABOUT COWS in INDIA
+              </h2>
+              <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                There are approximately 37 Types of Cow breeds in India.
                 Out of them 5(Five) are known for their miking prowess.<br></br></p>
-                <ul>
-<li>•	Sahiwal</li>
-<li>•	Gir</li>
-<li>•	Red Sindhi</li>
-<li>•	Tharparkar</li>
-<li>•	Rathi</li></ul><br></br>
-A few others, such as Kankrej, Ongole and Hariana, belong to dual breeds that have both milch and draught qualities.; ie, they are good plough animals.
-The rest are pure draught breeds.
+              <ul>
+                <li>•	Sahiwal</li>
+                <li>•	Gir</li>
+                <li>•	Red Sindhi</li>
+                <li>•	Tharparkar</li>
+                <li>•	Rathi</li></ul><br></br>
+              A few others, such as Kankrej, Ongole and Hariana, belong to dual breeds that have both milch and draught qualities.; ie, they are good plough animals.
+              The rest are pure draught breeds.
 
-                  <br></br>
-                
+              <br></br>
 
-                {/* <div className="grid grid-cols-2 gap-6">
+
+              {/* <div className="grid grid-cols-2 gap-6">
                   {[
                     { icon: Leaf, text: "Sustainable Solutions" },
                     { icon: Factory, text: "Modern Facilities" },
@@ -301,65 +302,65 @@ The rest are pure draught breeds.
                     </motion.div>
                   ))}
                 </div> */}
-              </motion.div>
+            </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative flex justify-center"
-              >
-                <div className="absolute inset-0  rounded-2xl " />
-                <img
-                  src="/gau.png"
-                  alt="Agricultural Facility"
-                  className="relative z-10 rounded-2xl shadow-lg"
-                />
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative flex justify-center"
+            >
+              <div className="absolute inset-0  rounded-2xl " />
+              <img
+                src="/gau.png"
+                alt="Agricultural Facility"
+                className="relative z-10 rounded-2xl shadow-lg"
+              />
+            </motion.div>
           </div>
           <div className="flex flex-col items-center w-full px-4 md:flex-row">
-      {/* Swiper Slider */}
-      <Swiper
-        loop={true}
-        freeMode={true}
-        breakpoints={{
-          320: { slidesPerView: 2, spaceBetween: 10 }, // Small screens
-          480: { slidesPerView: 2, spaceBetween: 15 }, // Medium screens
-          768: { slidesPerView: 3, spaceBetween: 20 }, // Tablets
-          1024: { slidesPerView: 5, spaceBetween: 30 }, // Large screens
-        }}
-        modules={[Autoplay, FreeMode]}
-        autoplay={{
-          delay: 1, // Continuous scrolling
-          disableOnInteraction: false, // Pauses autoplay temporarily during interaction
-          pauseOnMouseEnter: true, // Pause on hover
-        }}
-        speed={8000} // Smooth continuous scrolling
-        className="mySwiper w-full"
-      >
-        {imagesAndNames.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="flex flex-col justify-center items-center gap-2 ">
-              <div className="text-center flex flex-col justify-center items-center relative gap-2">
-                <div className="relative w-28 h-28">
-                  <img
-                    src={item.src}
-                    alt={item.name}
-                    className="w-full h-full object-contain rounded-md mirror-image"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-md font-bold mt-2">{item.name}</h3>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+            {/* Swiper Slider */}
+            <Swiper
+              loop={true}
+              freeMode={true}
+              breakpoints={{
+                320: { slidesPerView: 2, spaceBetween: 10 }, // Small screens
+                480: { slidesPerView: 2, spaceBetween: 15 }, // Medium screens
+                768: { slidesPerView: 3, spaceBetween: 20 }, // Tablets
+                1024: { slidesPerView: 5, spaceBetween: 30 }, // Large screens
+              }}
+              modules={[Autoplay, FreeMode]}
+              autoplay={{
+                delay: 1, // Continuous scrolling
+                disableOnInteraction: false, // Pauses autoplay temporarily during interaction
+                pauseOnMouseEnter: true, // Pause on hover
+              }}
+              speed={8000} // Smooth continuous scrolling
+              className="mySwiper w-full"
+            >
+              {imagesAndNames.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex flex-col justify-center items-center gap-2 ">
+                    <div className="text-center flex flex-col justify-center items-center relative gap-2">
+                      <div className="relative w-28 h-28">
+                        <img
+                          src={item.src}
+                          alt={item.name}
+                          className="w-full h-full object-contain rounded-md mirror-image"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-md font-bold mt-2">{item.name}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
           <Accordiann />
-         
+
           {/* <motion.div className="flex flex-col items-center justify-center pt-4">
              <h3 >Book your Appointment to know more</h3>
         <button
@@ -502,9 +503,9 @@ The rest are pure draught breeds.
           </div>
         )}
         </motion.div> */}
-          </div>
+        </div>
       </section>
-      
+
       {/* <section id="services" className="py-8 bg-white px-4 md:px-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -673,6 +674,6 @@ The rest are pure draught breeds.
           </a>
         </div>
       </footer>
-      </>
+    </>
   );
 }
