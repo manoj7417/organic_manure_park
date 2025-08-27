@@ -290,9 +290,10 @@ export default function ContentSections() {
             <h3 className="text-3xl font-bold text-gray-900 mb-6">Vision</h3>
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
               <p>MaAMMA AGRIBUSINESS Pvt Ltd (MAPL) aspires to make our</p>
-              <p className="font-bold text-black-600 text-base">
-                Organic Manure Park (OMP) as the global benchmark for value
-                creation in providing Soil Health Engineering (SHE)
+              <p className="text-black-600 text-base">
+                <span className="font-bold">Organic Manure Park (OMP)</span> as
+                the global benchmark for value creation in providing{" "}
+                <span className="font-bold">Soil Health Engineering (SHE)</span>
               </p>
             </div>
           </div>
@@ -305,13 +306,14 @@ export default function ContentSections() {
             <h3 className="text-3xl font-bold text-gray-900 mb-6">Mission</h3>
             <div className="text-lg text-gray-700 leading-relaxed">
               <p>
-                MaAMMA AGRIBUSINESS Pvt Ltd's mission is to{" "}
-                <span className="font-bold text-black-600">establish</span>{" "}
-                Organic Manure Parks across various locations in India and
-                globally to strengthen the agricultural base through effective
-                and efficient utilization of resources, employing modern
-                technologies, and providing various solutions for soil health
-                engineering.
+                <span className="font-bold text-black-600">
+                  MaAMMA AGRIBUSINESS Pvt Ltd's
+                </span>{" "}
+                mission is to establish Organic Manure Parks across various
+                locations in India and globally to strengthen the agricultural
+                base through effective and efficient utilization of resources,
+                employing modern technologies, and providing various solutions
+                for soil health engineering.
               </p>
             </div>
           </div>

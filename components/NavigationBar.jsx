@@ -84,13 +84,13 @@ export default function NavigationBar() {
           <div className="flex items-center space-x-3">
             {/* Cow Icon - Redirects to Kamdhenu */}
             <Link href="/kamdhenu" className="hidden lg:block">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-green-50 transition-all duration-200 cursor-pointer">
+              <div className="flex items-center justify-center w-14 h-14 rounded-full hover:bg-green-50 transition-all duration-200 cursor-pointer">
                 <Image
                   src="/cow.png"
                   alt="Cow Icon - Go to Kamdhenu"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain"
+                  width={48}
+                  height={48}
+                  className="w-16 h-16 object-contain"
                 />
               </div>
             </Link>

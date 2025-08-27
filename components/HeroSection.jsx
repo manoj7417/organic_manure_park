@@ -69,7 +69,18 @@ export default function HeroSection() {
             Partnering with traditional cow shelters to create sustainable
             organic solutions
           </p>
-          <Button className="bg-green-600 hover:bg-green-700 text-white p-4 text-base font-semibold transition-all duration-300 hover:scale-105 mt-10">
+          <Button
+            onClick={() => {
+              const parkSection = document.getElementById("park");
+              if (parkSection) {
+                parkSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+            className="bg-green-600 hover:bg-green-700 text-white p-4 text-base font-semibold transition-all duration-300 hover:scale-105 mt-10 cursor-pointer"
+          >
             Know More
           </Button>
         </div>

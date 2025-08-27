@@ -265,7 +265,7 @@ export default function Home() {
             href="/"
             className="fixed top-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-[#43923f] hover:text-white transition"
           >
-            <FaHome className="text-2xl text-[#43923f] hover:text-white" /> {/* React Icon */}
+            <FaHome className="text-2xl text-[#43923f] hover:text-white " /> {/* React Icon */}
           </Link>
         </div>
 
@@ -677,13 +677,13 @@ export default function Home() {
               enquiry@theagrovillage.com
             </p> */}
           </div>
-          <a href="https://www.facebook.com">
+          <a href="#">
             <FaFacebook className="h-7 w-7 text-blue-700" />
           </a>
-          <a href="https://www.instagram.com">
+          <a href="#">
             <FaInstagram className="h-7 w-7 text-red-700" />
           </a>
-          <a href="https://x.com">
+          <a href="#">
             <FaXTwitter className="h-7 w-7 text-blue-900" />
           </a>
         </div>
