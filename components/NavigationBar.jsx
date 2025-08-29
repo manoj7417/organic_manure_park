@@ -70,14 +70,9 @@ export default function NavigationBar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-0 align-left">
-            <Image
-              src="/logo.png"
-              alt="The Agro Village Logo"
-              width={150}
-              height={100}
-              className="w-14 h-14"
-            />
-            {/* <span className="text-xl font-bold text-green-800">Organic Manure Park</span> */}
+            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 via-green-700 to-green-800 bg-clip-text text-transparent">
+              MAPL
+            </span>
           </div>
 
           {/* Hamburger Menu Button - Now visible on all screen sizes */}
@@ -126,14 +121,7 @@ export default function NavigationBar() {
                 <div className="flex flex-col h-full pt-6 pb-6">
                   {/* Header Section */}
                   <div className="flex items-center justify-between mb-8 pb-6 border-b border-gray-100">
-                    <div className="flex items-center space-x-4">
-                      <Image
-                        src="/logo.png"
-                        alt="The Agro Village Logo"
-                        width={60}
-                        height={60}
-                        className="w-12 h-12 rounded-lg shadow-sm"
-                      />
+                    <div className="flex items-center space-x-4 px-5">
                       <div>
                         <h2 className="text-lg font-bold text-green-800 leading-tight">
                           Organic Manure Park

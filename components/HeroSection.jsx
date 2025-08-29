@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Play, Pause } from "lucide-react";
+import { Play, Pause, ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
@@ -65,24 +65,30 @@ export default function HeroSection() {
               Gaushalas
             </span>
           </h3>
-          <p className="text-lg lg:text-xl text-white leading-relaxed drop-shadow-lg">
+          <p className="text-lg lg:text-xl text-white leading-relaxed drop-shadow-lg mb-8">
             Partnering with traditional cow shelters to create sustainable
             organic solutions
           </p>
-          <Button
-            onClick={() => {
-              const parkSection = document.getElementById("park");
-              if (parkSection) {
-                parkSection.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-              }
-            }}
-            className="bg-green-600 hover:bg-green-700 text-white p-4 text-base font-semibold transition-all duration-300 hover:scale-105 mt-10 cursor-pointer"
-          >
-            Know More
-          </Button>
+
+          <div className="flex justify-center">
+            <button
+              onClick={() => {
+                const parkSection = document.getElementById("park");
+                if (parkSection) {
+                  parkSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
+              className="flex items-center gap-2 cursor-pointer group"
+              aria-label="Scroll down to learn more"
+            >
+              <div className="w-6 h-12 border-2 border-white rounded-full relative flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full animate-bounce"></div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
