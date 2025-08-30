@@ -55,17 +55,17 @@ export default function HeroSection() {
             <span className="text-green-400">Organic</span>{" "}
             <span className="text-white">Manure Park</span>
           </h1>
-          <p className="text-xl lg:text-2xl text-white font-light drop-shadow-lg mb-12">
-            Sustainable. Natural. Revolutionary.
+          <p className="text-xl lg:text-3xl text-white font-light drop-shadow-lg mb-10">
+            Sustainable <span className="text-red-600">|</span> Natural{" "}
+            <span className="text-red-600">|</span> Revolutionary.
           </p>
 
-          <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4 drop-shadow-lg">
-            Our Association with{" "}
-            <span className="text-red-400 border-b-2 border-dotted border-red-400">
-              Gaushalas
-            </span>
+          <h3 className="text-3xl lg:text-4xl font-bold text-white drop-shadow-lg flex flex-col">
+            <span className="text-red-400">Our Association</span>
+            <span className="text-red-400 ">With</span>
+            <span className="text-white text-5xl">Gaushalas</span>
           </h3>
-          <p className="text-lg lg:text-xl text-white leading-relaxed drop-shadow-lg mb-8">
+          <p className="text-lg lg:text-2xl text-white leading-relaxed drop-shadow-lg mb-8">
             Partnering with traditional cow shelters to create sustainable
             organic solutions
           </p>

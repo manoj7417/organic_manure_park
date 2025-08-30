@@ -98,9 +98,13 @@ export default function ProjectsSection() {
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
           Our <span className="text-green-600">Projects</span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 max-w-5xl mx-auto">
           Discover our innovative projects that are transforming agriculture and
           promoting sustainability.
+        </p>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Be associated & Partner with our innovative and proposed projects that
+          will transform landscape of agriculture
         </p>
       </div>
 

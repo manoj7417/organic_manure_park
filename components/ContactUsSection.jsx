@@ -9,8 +9,8 @@ export default function ContactUsSection() {
           Contact <span className="text-green-600">Us</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Get in touch with us to learn more about our organic manure
-          solutions and sustainable farming initiatives.
+          Get in touch with us to learn more about our organic manure solutions
+          and sustainable farming initiatives.
         </p>
       </div>
 
@@ -50,9 +50,13 @@ export default function ContactUsSection() {
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 Address
               </h3>
-              <p className="text-gray-600">Organic Manure Park</p>
-              <p className="text-gray-600">Agricultural District, India</p>
-              <p className="text-gray-600">PIN: 123456</p>
+              <p className="text-gray-600">
+                B-402, Brindavan Apts, Krishnanagar
+              </p>
+              <p className="text-gray-600">
+                Maharanipeta . Vishakapatanam – 530002
+              </p>
+              <p className="text-gray-600">Andhra Pradesh . India </p>
             </div>
           </div>
         </div>

@@ -110,8 +110,8 @@ export default function OrganicManureParkSection() {
           Organic <span className="text-green-600">Manure Park</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-          Organic Manure Park is Proposed to be spread over a Minimum of 5
-          acres and a Maximum of 15 acres to accommodate
+          Organic Manure Park is Proposed to be spread over a Minimum of 5 acres
+          and a Maximum of 15 acres to accommodate
         </p>
       </div>
 
@@ -223,8 +223,12 @@ export default function OrganicManureParkSection() {
               Target <span className="text-green-600">Planned</span>
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our ambitious goals for establishing Organic Manure Parks and
-              partnering with Gaushalas across India
+              Our ambitious goals for establishing Organic Manure Parks at 108
+              Locations <br />
+              by <span className="font-bold">
+                Associating & Partnering
+              </span>{" "}
+              with <br /> GAUSHALAS
             </p>
           </div>
 
@@ -238,9 +242,7 @@ export default function OrganicManureParkSection() {
               <div className="text-xl font-semibold text-gray-800 mb-2">
                 OMP
               </div>
-              <div className="text-sm text-gray-600">
-                Organic Manure Parks
-              </div>
+              <div className="text-sm text-gray-600">Organic Manure Parks</div>
             </div>
 
             {/* Gaushala Statistic */}

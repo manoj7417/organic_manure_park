@@ -73,11 +73,13 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-green-300" />
                 <span className="text-green-100">info@agrovillage.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-green-300" />
-                <span className="text-green-100">
-                  Organic Manure Park, India
-                </span>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" />
+                <div className="text-green-100">
+                  <div>B-402, Brindavan Apts,</div>
+                  <div>Krishnanagar ,Maharanipeta, Vishakapatanam – 530002</div>
+                  <div>Andhra Pradesh, India</div>
+                </div>
               </div>
             </div>
           </div>
@@ -98,7 +100,9 @@ export default function Footer() {
         <div className="border-t border-green-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-green-100 text-sm">
-              © 2025 Organic Manure Park. All rights reserved.
+              © 2025 All rights reserved with MaAmma Agribusiness Pvt Ltd ,
+              India RoC No :{" "}
+              <span className="font-bold">U47912AP2024PTC115516</span>
             </p>
             <div className="flex space-x-6 text-sm">
               <a

@@ -96,6 +96,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Vijayawada, AP",
         icon: "MapPin",
+        image: "/nirmala.jpeg",
       },
       {
         id: 2,
@@ -105,6 +106,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Guntur, AP",
         icon: "MapPin",
+        image: "/Radhika.jpeg",
       },
       {
         id: 3,
@@ -114,6 +116,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Visakhapatnam, AP",
         icon: "MapPin",
+        image: "/AI-women.png",
       },
     ],
     Maharashtra: [
@@ -125,6 +128,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Mumbai, MH",
         icon: "MapPin",
+        image: "/manisha-mahto.jpeg",
       },
       {
         id: 5,
@@ -134,6 +138,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Pune, MH",
         icon: "MapPin",
+        image: "/Archana.jpeg",
       },
     ],
     Uttarakhand: [
@@ -145,6 +150,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Dehradun, UK",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 7,
@@ -154,6 +160,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Haridwar, UK",
         icon: "MapPin",
+        image: "/AI-women.png",
       },
     ],
     "Tamil Nadu": [
@@ -165,6 +172,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Chennai, TN",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 9,
@@ -174,6 +182,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Coimbatore, TN",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 10,
@@ -183,6 +192,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Madurai, TN",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
     ],
     Karnataka: [
@@ -194,6 +204,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Bangalore, KA",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 12,
@@ -203,6 +214,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Mysore, KA",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
     ],
     Telangana: [
@@ -214,6 +226,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Hyderabad, TS",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 14,
@@ -223,6 +236,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Warangal, TS",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 15,
@@ -232,6 +246,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Karimnagar, TS",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
     ],
     Kerala: [
@@ -243,6 +258,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Kochi, KL",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 17,
@@ -252,6 +268,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Thiruvananthapuram, KL",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
     ],
     Gujarat: [
@@ -263,6 +280,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Ahmedabad, GJ",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 19,
@@ -272,6 +290,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Surat, GJ",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
       {
         id: 20,
@@ -281,6 +300,7 @@ export default function AboutUsSection() {
         role: "Business Associate",
         location: "📍 Vadodara, GJ",
         icon: "MapPin",
+        image: "/AI-man.png",
       },
     ],
   };
@@ -329,8 +349,12 @@ export default function AboutUsSection() {
             Regional <span className="text-green-600">Business Associates</span>
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our dedicated team of business associates across different regions,
-            working together to promote sustainable agriculture
+            Our dedicated team consisting of business associates across
+            different locations
+          </p>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            and working together in promoting usage of Organic manure for
+            sustainable & organic agriculture
           </p>
         </div>
 
@@ -366,7 +390,7 @@ export default function AboutUsSection() {
 
             return (
               <SwiperSlide key={state}>
-                <div className="bg-white rounded-2xl shadow-lg border border-green-100 p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 w-full h-[320px] flex flex-col">
+                <div className="bg-white rounded-2xl shadow-lg border border-green-100 p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 w-full h-[400px] flex flex-col">
                   <div className="flex items-center mb-6">
                     <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                       <MapPin className="w-7 h-7 text-green-600" />
@@ -380,8 +404,22 @@ export default function AboutUsSection() {
                       </p>
                     </div>
                   </div>
+
                   <div className="bg-green-50 rounded-xl p-6 flex-1 flex flex-col justify-center">
                     <div className="text-center space-y-4">
+                      {/* Associate Image */}
+                      <div className="flex justify-center mb-4">
+                        <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                          <Image
+                            src={currentAssociate.image}
+                            alt={currentAssociate.name}
+                            width={80}
+                            height={80}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+
                       <div className="animate-fade-in">
                         <h5 className="font-semibold text-gray-800 text-lg leading-tight mb-2">
                           {currentAssociate.name}

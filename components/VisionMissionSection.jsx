@@ -6,8 +6,7 @@ export default function VisionMissionSection() {
           Vision & <span className="text-green-600">Mission</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Our commitment to sustainable agriculture and soil health
-          engineering
+          Our commitment to sustainable agriculture and soil health engineering
         </p>
       </div>
 
@@ -27,7 +26,7 @@ export default function VisionMissionSection() {
         </div>
 
         {/* Vertical Separator Line */}
-        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-300 transform -translate-x-1/2"></div>
+        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-800 transform -translate-x-1/2"></div>
 
         {/* Mission Statement */}
         <div className="bg-white rounded-none shadow-none  p-8 text-center lg:text-justify">
@@ -37,11 +36,11 @@ export default function VisionMissionSection() {
               <span className="font-bold text-black-600">
                 MaAMMA AGRIBUSINESS Pvt Ltd's
               </span>{" "}
-              mission is to establish Organic Manure Parks across various
-              locations in India and globally to strengthen the agricultural
-              base through effective and efficient utilization of resources,
-              employing modern technologies, and providing various solutions
-              for soil health engineering.
+              mission is to establish Organic Manure Parks in 108 locations
+              across India and Overseas to strengthen the agricultural base
+              through effective and efficient utilization of local resources,
+              employing modern technologies, and providing various solutions for
+              soil health engineering.
             </p>
           </div>
         </div>
