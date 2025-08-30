@@ -103,7 +103,7 @@ export default function ProjectsSection() {
           promoting sustainability.
         </p>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Be associated & Partner with our innovative and proposed projects that
+          Be Associate & Partner with our innovative and proposed projects that
           will transform landscape of agriculture
         </p>
       </div>

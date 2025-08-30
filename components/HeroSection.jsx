@@ -56,14 +56,13 @@ export default function HeroSection() {
             <span className="text-white">Manure Park</span>
           </h1>
           <p className="text-xl lg:text-3xl text-white font-light drop-shadow-lg mb-10">
-            Sustainable <span className="text-red-600">|</span> Natural{" "}
-            <span className="text-red-600">|</span> Revolutionary.
+            Sustainable | Natural | Revolutionary.
           </p>
 
           <h3 className="text-3xl lg:text-4xl font-bold text-white drop-shadow-lg flex flex-col">
-            <span className="text-red-400">Our Association</span>
-            <span className="text-red-400 ">With</span>
-            <span className="text-white text-5xl">Gaushalas</span>
+            <span>Our Association</span>
+            <span>With</span>
+            <span className="text-green-400 text-5xl">Gaushalas</span>
           </h3>
           <p className="text-lg lg:text-2xl text-white leading-relaxed drop-shadow-lg mb-8">
             Partnering with traditional cow shelters to create sustainable

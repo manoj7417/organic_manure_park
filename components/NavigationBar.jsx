@@ -70,8 +70,9 @@ export default function NavigationBar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-0 align-left">
-            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 via-green-700 to-green-800 bg-clip-text text-transparent">
-              MAPL
+            <span className="text-base text-green-800">
+              MaAMMA Agribusiness <br />
+              Private Limited
             </span>
           </div>
 

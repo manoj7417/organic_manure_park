@@ -1,7 +1,56 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useState } from "react";
 
 export default function ContactUsSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Simple form submission to API route
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
@@ -24,8 +73,8 @@ export default function ContactUsSection() {
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 Phone
               </h3>
-              <p className="text-gray-600">+91 98765 43210</p>
-              <p className="text-gray-600">+91 98765 43211</p>
+              <p className="text-gray-600">+91 8080738225</p>
+              {/* <p className="text-gray-600">+91 98765 43211</p> */}
             </div>
           </div>
 
@@ -65,13 +114,35 @@ export default function ContactUsSection() {
           <h3 className="text-2xl font-semibold text-gray-800 mb-6">
             Send us a Message
           </h3>
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {submitStatus === "success" && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <p className="text-green-800 font-medium">
+                  Thank you! Your message has been sent successfully. We'll get
+                  back to you soon.
+                </p>
+              </div>
+            )}
+
+            {submitStatus === "error" && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                <p className="text-red-800 font-medium">
+                  Sorry, there was an error sending your message. Please try
+                  again.
+                </p>
+              </div>
+            )}
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Name
               </label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 placeholder="Your full name"
               />
@@ -82,8 +153,26 @@ export default function ContactUsSection() {
               </label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 placeholder="your.email@example.com"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                placeholder="+91 98765 43210"
               />
             </div>
             <div>
@@ -91,13 +180,21 @@ export default function ContactUsSection() {
                 Message
               </label>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                required
                 rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 placeholder="Tell us about your inquiry..."
               ></textarea>
             </div>
-            <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg">
-              Send Message
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </div>

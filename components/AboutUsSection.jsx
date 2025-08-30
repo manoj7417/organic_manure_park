@@ -134,7 +134,7 @@ export default function AboutUsSection() {
         id: 5,
         city: "Pune",
         state: "Maharashtra",
-        name: "Mrs. Archana Kharbore",
+        name: "Mrs. Archana Gharbude",
         role: "Business Associate",
         location: "📍 Pune, MH",
         icon: "MapPin",
@@ -349,12 +349,12 @@ export default function AboutUsSection() {
             Regional <span className="text-green-600">Business Associates</span>
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our dedicated team consisting of business associates across
-            different locations
+            Our dedicated team consists of business associates across different
+            locations
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            and working together in promoting usage of Organic manure for
-            sustainable & organic agriculture
+            and working together in promoting usage of Organic manure <br />
+            for sustainable & organic agriculture
           </p>
         </div>
 
@@ -409,13 +409,13 @@ export default function AboutUsSection() {
                     <div className="text-center space-y-4">
                       {/* Associate Image */}
                       <div className="flex justify-center mb-4">
-                        <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-white shadow-lg">
                           <Image
                             src={currentAssociate.image}
                             alt={currentAssociate.name}
-                            width={80}
-                            height={80}
-                            className="w-full h-full object-cover"
+                            width={100}
+                            height={100}
+                            className="w-full h-full object-contain"
                           />
                         </div>
                       </div>
